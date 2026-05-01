@@ -1,0 +1,127 @@
+.works-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: transparent;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.works-header {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.works-title {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  color: var(--text-white);
+  text-shadow: 4px 4px 0px var(--text-black);
+  text-transform: uppercase;
+}
+
+.works-grid {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.work-card {
+  flex: 1;
+  padding: 4rem 2rem 3rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* Tape Effect */
+.work-card::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  width: 120px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  transform: rotate(-2deg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.card-tech {
+  background-color: #fff9c4;
+  /* Soft Yellow */
+  transform: rotate(-2deg);
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-posters {
+  background-color: #f8bbd0;
+  /* Soft Pink */
+  transform: rotate(2deg);
+  box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.work-card:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon-box {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.1));
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--text-black);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-description {
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.card-badge {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 2px dashed var(--text-black);
+  color: var(--text-black);
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .works-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .works-title {
+    font-size: 3rem;
+  }
+
+  .work-card {
+    transform: rotate(0) !important;
+  }
+}

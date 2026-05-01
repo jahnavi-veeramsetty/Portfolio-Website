@@ -1,0 +1,115 @@
+.aboutme-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: transparent;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutme-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.id-image-wrapper {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.id-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Completely raw image - no radius, shadow, or rotation */
+}
+
+.aboutme-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.about-card {
+  background-color: var(--text-white);
+  color: var(--text-black);
+  padding: 3rem;
+  border-radius: 40px;
+  max-width: 500px;
+  box-shadow: 20px 20px 0px var(--text-black);
+  position: relative;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid var(--text-black);
+  border-radius: 45px;
+  z-index: -1;
+}
+
+.about-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-red);
+  text-transform: uppercase;
+}
+
+.about-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detail-label {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--primary-red);
+  min-width: 100px;
+}
+
+.detail-value {
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .aboutme-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .aboutme-left {
+    margin-bottom: 3rem;
+  }
+  .about-card {
+    padding: 2rem;
+    max-width: 100%;
+  }
+}
