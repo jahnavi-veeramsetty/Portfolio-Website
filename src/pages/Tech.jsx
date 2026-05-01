@@ -16,33 +16,32 @@ const Tech = () => {
             id: 1,
             title: "Arrivio",
             image: arrivioImg,
-            desc: "A comprehensive travel planning application designed to streamline your journeys.",
-            matter: "Arrivio is built with React and Node.js, featuring real-time flight tracking, itinerary management, and local recommendations. It aims to make travel planning as seamless as the journey itself.",
-            github: "https://github.com/jahnavi/arrivio"
+            desc: "Browse and lease homes in Germany; without SCHUFA checks or endless paperwork.",
+            matter: "A Germany-based housing platform that simplifies renting by removing traditional barriers like SCHUFA checks and excessive documentation, making home leasing faster and more accessible.",
+            github: "https://github.com/jahnavi-veeramsetty/Arrivio.git"
         },
         {
             id: 2,
             title: "SafeMom",
             image: safemomImg,
-            desc: "Maternal health tracking and support system for expecting mothers.",
-            matter: "SafeMom provides personalized health insights, appointment reminders, and a community forum for mothers. Built with React Native and Firebase, it ensures health data is always at your fingertips.",
-            github: "https://github.com/jahnavi/safemom"
+            desc: "Smart maternal care with personalized insights and risk prediction.",
+            matter: "A digital health platform for expecting mothers that delivers personalized insights, appointment reminders, and community support—while intelligently predicting risk levels (low, medium, high) for proactive care.",
+            github: "https://github.com/jahnavi-veeramsetty/SafeMom.git"
         },
         {
             id: 3,
             title: "Tesoro",
             image: tesoroImg,
-            desc: "Curated marketplace for unique treasures and handcrafted goods.",
-            matter: "Tesoro is an e-commerce platform that connects artisans with collectors. It features a custom search engine, secure payment integration, and a sleek, minimalist UI.",
-            github: "https://github.com/jahnavi/tesoro"
+            desc: "A 2D adventure where timing and reflexes decide survival.",
+            matter: "An engaging 2D game where players navigate obstacles, collect coins, and test their reflexes in a dynamic environment designed for fun and challenge.",
+            github: "https://github.com/jahnavi-veeramsetty/Tesoro.git"
         },
         {
             id: 4,
-            title: "VakyaVani",
+            title: "Vakya Vani",
             image: vakyavaniImg,
-            desc: "Natural language processing and speech assistant for local languages.",
-            matter: "VakyaVani leverages machine learning to provide accurate speech-to-text and translation services. It focuses on accessibility and empowering users in their native tongues.",
-            github: "https://github.com/jahnavi/vakyavani"
+            desc: "Turning hand gestures into words using computer vision.",
+            matter: "A CV and ML-based system that uses webcam input to detect hand gestures and translate them into meaningful signs, bridging communication gaps through real-time prediction.",
         }
     ];
 
@@ -70,7 +69,7 @@ const Tech = () => {
     return (
 
         <div className="project-page-container">
-            <Link to="/" className="floating-back-link">← BACK</Link>
+            <Link to="/" className="floating-back-link">BACK</Link>
             <header className="project-header">
                 <h1 className="project-title">Tech Projects</h1>
                 <p className="project-tagline">Building the future with code and design.</p>
@@ -79,8 +78,8 @@ const Tech = () => {
             <main className="project-layout">
                 <div className="project-grid">
                     {projects.map((project) => (
-                        <div 
-                            key={project.id} 
+                        <div
+                            key={project.id}
                             className="project-card"
                             onClick={() => openPopup(project)}
                         >
@@ -109,14 +108,17 @@ const Tech = () => {
                             <div className="popup-info">
                                 <h2 className="popup-title">{selectedProject.title}</h2>
                                 <p className="popup-matter">{selectedProject.matter}</p>
-                                <a 
-                                    href={selectedProject.github} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="github-link"
-                                >
-                                    View on GitHub
-                                </a>
+                                {selectedProject.github && (
+                                    <a
+                                        href={selectedProject.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="github-link"
+                                    >
+                                        View on GitHub
+                                    </a>
+                                )}
+
                             </div>
                         </div>
                     </div>

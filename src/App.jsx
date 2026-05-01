@@ -6,9 +6,12 @@ import NonTech from './pages/nonTech';
 import './index.css';
 import bgImage from './assets/bg.png';
 
+import ScrollToTop from './component/utils/ScrollToTop';
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <div 
           className="bg-overlay" 
@@ -21,7 +24,7 @@ function App() {
             height: '100%',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.4,
+            opacity: 0.2,
             pointerEvents: 'none',
             zIndex: 0
           }}
