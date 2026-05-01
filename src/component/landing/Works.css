@@ -31,11 +31,11 @@
 
 .work-card {
   flex: 1;
-  padding: 4rem 2rem 3rem;
+  padding: 2rem 2rem 3rem;
   position: relative;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
-  max-width: 400px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,10 +77,28 @@
 }
 
 .card-icon-box {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.1));
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.card-icon-img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.work-card:hover .card-icon-img {
+  transform: scale(1.08);
+}
+
+
+
+
 
 .card-title {
   font-family: var(--font-heading);

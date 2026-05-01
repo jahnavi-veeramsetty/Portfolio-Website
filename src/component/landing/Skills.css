@@ -1,0 +1,336 @@
+.skills-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.skills-title {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  color: var(--text-white);
+  text-shadow: 4px 4px 0px var(--text-black);
+  text-transform: uppercase;
+}
+
+.skills-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-white);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.skills-grid-container {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.skills-main-row, .skills-bottom-row {
+  display: flex;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.skills-box {
+  background-color: white;
+  border: 4px solid var(--text-black);
+  border-radius: 30px;
+  padding: 3rem;
+  position: relative;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skills-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Technical Skills Card */
+.technical-skills-card {
+  flex: 1.8;
+  background-color: #fff5f8; /* Soft Blush Pink */
+}
+
+.box-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.box-badge {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  border-radius: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  border: 3px solid var(--text-black);
+  box-shadow: 4px 4px 0px var(--text-black);
+}
+
+.pink-badge { background-color: #ff91af; }
+.yellow-badge { background-color: #ffcc33; color: var(--text-black); }
+.tool-badge { background-color: #ffb7b2; color: var(--text-black); }
+
+.technical-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  color: var(--text-black);
+  font-size: 1rem;
+}
+
+.skill-icon-wrap {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  margin-right: 1rem;
+  font-size: 1rem;
+  border: 2px solid #eee;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+}
+
+.skill-name {
+  flex-grow: 1;
+}
+
+.skill-percentage {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid var(--text-black);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 20px;
+  border-right: 2px solid var(--text-black);
+}
+
+/* Soft Skills Card */
+.soft-skills-card {
+  flex: 1;
+  background-color: #fff9c4; /* Sticky note yellow */
+  transform: rotate(1deg);
+  padding-bottom: 5rem;
+}
+
+.soft-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.soft-skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: #444;
+  font-size: 1.1rem;
+  border-bottom: 2px solid rgba(200, 180, 100, 0.4); /* subtle yellow/brown line */
+  width: 100%;
+}
+
+
+.star-icon {
+  color: #ffcc33;
+  filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.1));
+}
+
+.bear-mascot-container {
+  position: absolute;
+  bottom: -60px;
+  right: -50px;
+  width: 280px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.bear-mascot {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(10px 10px 0px rgba(0,0,0,0.05));
+}
+
+/* Tools Card */
+.tools-card {
+  flex: 1.8;
+  background-color: #fdfdfd;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.2rem;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding-bottom: 1rem; /* For scrollbar if needed */
+}
+
+.tools-list::-webkit-scrollbar {
+  height: 6px;
+}
+.tools-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.tool-icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border: 3px solid #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.tool-icon-img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.tool-item:hover .tool-icon-circle {
+  transform: scale(1.1) rotate(5deg);
+  border-color: #ff91af;
+}
+
+.tool-name {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #555;
+  text-transform: uppercase;
+}
+
+/* Learning Card */
+.learning-card-container {
+  flex: 1;
+  background-color: #f5cdcd;
+  border-radius: 25px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  box-shadow: 6px 6px 0px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.learning-card-container:hover {
+  transform: translateY(-5px);
+}
+
+.learning-card-inner {
+  flex: 1;
+  background-color: #fcf1f1;
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  outline: 2px dashed #f5cdcd;
+  outline-offset: -10px;
+}
+
+
+.learning-title {
+  font-family: var(--font-heading);
+  color: #f2858e;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.learning-text {
+  font-weight: 700;
+  color: #6e798c;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.learning-heart {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  color: #f2858e;
+}
+
+.learning-clip {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  color: #f2858e;
+  transform: rotate(20deg);
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+  z-index: 5;
+}
+
+
+@media (max-width: 1024px) {
+  .skills-main-row, .skills-bottom-row {
+    flex-direction: column;
+  }
+  .technical-list {
+    grid-template-columns: 1fr;
+  }
+  .bear-mascot-container {
+    width: 200px;
+    right: -20px;
+    bottom: -40px;
+  }
+}
