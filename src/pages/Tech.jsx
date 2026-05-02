@@ -18,6 +18,11 @@ const Tech = () => {
             image: arrivioImg,
             desc: "Browse and lease homes in Germany; without SCHUFA checks or endless paperwork.",
             matter: "A Germany-based housing platform that simplifies renting by removing traditional barriers like SCHUFA checks and excessive documentation, making home leasing faster and more accessible.",
+            links: [
+                { label: "Arrivio B2C", url: "https://arrivio-b2c.vercel.app/" },
+                { label: "Arrivio B2B", url: "https://arrivio-business.vercel.app/" },
+                { label: "Arrivio Admin", url: "https://arrivio-admin-portal.vercel.app/login" }
+            ],
             github: "https://github.com/jahnavi-veeramsetty/Arrivio.git"
         },
         {
@@ -108,6 +113,17 @@ const Tech = () => {
                             <div className="popup-info">
                                 <h2 className="popup-title">{selectedProject.title}</h2>
                                 <p className="popup-matter">{selectedProject.matter}</p>
+                                {selectedProject.links && (
+                                    <ul className="popup-links-list">
+                                        {selectedProject.links.map((link, index) => (
+                                            <li key={index}>
+                                                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                                    {link.label}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                                 {selectedProject.github && (
                                     <a
                                         href={selectedProject.github}

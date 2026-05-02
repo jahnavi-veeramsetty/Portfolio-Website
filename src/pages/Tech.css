@@ -248,6 +248,32 @@
   margin-bottom: 2rem;
 }
 
+.popup-links-list {
+  list-style-type: disc;
+  margin: 0 0 2rem 1.5rem;
+  padding: 0;
+  text-align: left;
+}
+
+.popup-links-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text-black);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+}
+
+.popup-links-list a {
+  color: var(--primary-red);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+.popup-links-list a:hover {
+  color: #ff91af;
+}
+
 .github-link {
   display: inline-block;
   padding: 1rem 2rem;

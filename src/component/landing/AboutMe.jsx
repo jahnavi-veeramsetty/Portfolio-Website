@@ -15,26 +15,20 @@ const AboutMe = () => {
                 <div className="about-card">
                     <h2 className="about-title">About Me</h2>
                     <p className="about-content">
-                        I'm a passionate designer and developer with a decade of experience in creating modern,
-                        high-impact digital experiences. I believe in the power of minimal yet bold aesthetics.
-                    </p>
+                        A multidisciplinary designer and developer who blends creativity with technical precision. I enjoy transforming ideas into meaningful digital experiences through thoughtful design, clean interfaces, and intuitive user flows. My work focuses on storytelling, usability, and crafting visually engaging solutions that solve real-world problems.             </p>
 
                     <div className="about-details">
                         <div className="detail-item">
                             <span className="detail-label">Location</span>
-                            <span className="detail-value">New York, USA</span>
+                            <span className="detail-value">Hyderabad, India</span>
                         </div>
                         <div className="detail-item">
                             <span className="detail-label">Expertise</span>
-                            <span className="detail-value">UI/UX & Frontend Development</span>
+                            <span className="detail-value">Graphic Designer & System Designer</span>
                         </div>
                         <div className="detail-item">
                             <span className="detail-label">Status</span>
                             <span className="detail-value">Available for Projects</span>
-                        </div>
-                        <div className="detail-item">
-                            <span className="detail-label">Motto</span>
-                            <span className="detail-value">Design is life.</span>
                         </div>
                     </div>
                 </div>
