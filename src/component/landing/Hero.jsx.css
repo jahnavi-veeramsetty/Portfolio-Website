@@ -54,9 +54,12 @@
 
 .i-am {
   color: var(--text-white);
-  font-size: 8rem; /* Smaller than name */
-  margin-bottom: -1rem; /* Pull the name line closer from below */
-  transform: translateY(-2rem); /* Shift upwards */
+  font-size: 8rem;
+  /* Smaller than name */
+  margin-bottom: -1rem;
+  /* Pull the name line closer from below */
+  transform: translateY(-2rem);
+  /* Shift upwards */
 }
 
 .morpheus {
@@ -100,13 +103,36 @@
 .hero-footer {
   display: flex;
   justify-content: flex-start;
-  /* Move to left */
   align-items: center;
   gap: 2rem;
-  padding: 0 4rem 2rem 8rem;
-  /* Padding to align with text */
+  padding: 0 4rem 2rem 23rem;
   z-index: 10;
   animation: fadeInUp 1.4s ease forwards;
+  position: relative;
+}
+
+.resume-btn {
+  position: absolute;
+  left: 4rem;
+  padding: 0.8rem 1.8rem;
+  background-color: var(--text-white);
+  color: var(--text-black);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border: 2px solid var(--text-black);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+  background-color: #fce2e2; /* light tint on hover */
 }
 
 .footer-item {
