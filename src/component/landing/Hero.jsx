@@ -8,9 +8,9 @@ const Hero = () => {
             {/* Navigation */}
             <nav className="nav-header">
                 <a href="#about" className="nav-link">About</a>
-                <a href="#profile" className="nav-link">Profile</a>
+                <a href="#works" className="nav-link">Works</a>
+                <a href="#skills" className="nav-link">Skills</a>
                 <a href="#contact" className="nav-link">Contact</a>
-                <a href="#works" className="nav-link">My Works</a>
             </nav>
 
             <main className="hero-main">
