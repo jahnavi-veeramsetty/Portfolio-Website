@@ -1,47 +1,48 @@
 import React from 'react';
+import { Terminal, Brain, MessageSquare, BarChart, GitBranch, Database, Bot, Layout } from 'lucide-react';
 import './Skills.css';
 import bearImg from '../../assets/bear.png';
-import adobeImg from '../../assets/tools/adobe.png';
-import figmaImg from '../../assets/tools/figma.png';
-import canvaImg from '../../assets/tools/canva.png';
+import pyImg from '../../assets/tools/python.png';
+import dockerImg from '../../assets/tools/docker.png';
+import langsmithImg from '../../assets/tools/langsmith.png';
+import chromodbImg from '../../assets/tools/chromodb.png';
 import githubImg from '../../assets/tools/git.png';
-import vscodeImg from '../../assets/tools/vscode.png';
-import vercelImg from '../../assets/tools/vercel.png';
+import streamlitImg from '../../assets/tools/streamlit.png';
 import supabaseImg from '../../assets/tools/supabase.png';
-import illustratorImg from '../../assets/tools/illustrator.png';
+import ollamaImg from '../../assets/tools/ollama.png';
 
 const Skills = () => {
     const technicalSkills = [
-        { name: 'Color Theory', percentage: '80%', color: '#ff4d94', icon: '🎨' },
-        { name: 'Visual Storytelling', percentage: '95%', color: '#ffcc00', icon: '📚' },
-        { name: 'Wireframing & Prototyping', percentage: '90%', color: '#00ccff', icon: '✏️' },
-        { name: 'Layout & Composition', percentage: '85%', color: '#66cc33', icon: '📐' },
-        { name: 'Social Media Design', percentage: '90%', color: '#3366ff', icon: '📱' },
-        { name: 'UI Basics', percentage: '80%', color: '#9933ff', icon: '🖥️' },
-        { name: 'Typography', percentage: '85%', color: '#ff9933', icon: '✍️' },
-        { name: 'Design Systems', percentage: '75%', color: '#0066ff', icon: '🧩' },
+        { name: 'Python', percentage: '85%', color: '#ff4d94', icon: <Terminal size={20} /> },
+        { name: 'LLM & Rag Systems', percentage: '80%', color: '#ffcc00', icon: <Brain size={20} /> },
+        { name: 'Prompt Engineering', percentage: '90%', color: '#00ccff', icon: <MessageSquare size={20} /> },
+        { name: 'LLM Evaluation', percentage: '85%', color: '#66cc33', icon: <BarChart size={20} /> },
+        { name: 'Git & Github', percentage: '90%', color: '#3366ff', icon: <GitBranch size={20} /> },
+        { name: 'Vector Database', percentage: '80%', color: '#9933ff', icon: <Database size={20} /> },
+        { name: 'Hugging Face', percentage: '85%', color: '#ff9933', icon: <Bot size={20} /> },
+        { name: 'Streamlit', percentage: '85%', color: '#0066ff', icon: <Layout size={20} /> },
     ];
 
 
     const softSkills = [
         'Problem Solving',
-        'Creative Thinking',
+        'Technical Leadership',
+        'Product Thinking',
         'Time Management',
         'Attention to Detail',
         'Team Collaboration',
         'Adaptability',
-        'Continuous Learning',
     ];
 
     const tools = [
-        { name: 'Adobe Photoshop', icon: adobeImg, isImage: true },
-        { name: 'Figma', icon: figmaImg, isImage: true },
-        { name: 'Canva', icon: canvaImg, isImage: true },
+        { name: 'Python', icon: pyImg, isImage: true },
+        { name: 'Docker', icon: dockerImg, isImage: true },
+        { name: 'LangSmith', icon: langsmithImg, isImage: true },
+        { name: 'ChromaDB', icon: chromodbImg, isImage: true },
         { name: 'GitHub', icon: githubImg, isImage: true },
-        { name: 'VS Code', icon: vscodeImg, isImage: true },
-        { name: 'Vercel', icon: vercelImg, isImage: true },
+        { name: 'Streamlit', icon: streamlitImg, isImage: true },
         { name: 'Supabase', icon: supabaseImg, isImage: true },
-        { name: 'Illustrator', icon: illustratorImg, isImage: true },
+        { name: 'Ollama', icon: ollamaImg, isImage: true },
     ];
 
     return (
