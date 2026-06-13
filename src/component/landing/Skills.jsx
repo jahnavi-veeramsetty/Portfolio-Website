@@ -14,10 +14,10 @@ import ollamaImg from '../../assets/tools/ollama.png';
 const Skills = () => {
     const technicalSkills = [
         { name: 'Python', percentage: '85%', color: '#ff4d94', icon: <Terminal size={20} /> },
-        { name: 'LLM & Rag Systems', percentage: '80%', color: '#ffcc00', icon: <Brain size={20} /> },
+        { name: 'LLM & RAG Systems', percentage: '80%', color: '#ffcc00', icon: <Brain size={20} /> },
         { name: 'Prompt Engineering', percentage: '90%', color: '#00ccff', icon: <MessageSquare size={20} /> },
         { name: 'LLM Evaluation', percentage: '85%', color: '#66cc33', icon: <BarChart size={20} /> },
-        { name: 'Git & Github', percentage: '90%', color: '#3366ff', icon: <GitBranch size={20} /> },
+        { name: 'Git & GitHub', percentage: '90%', color: '#3366ff', icon: <GitBranch size={20} /> },
         { name: 'Vector Database', percentage: '80%', color: '#9933ff', icon: <Database size={20} /> },
         { name: 'Hugging Face', percentage: '85%', color: '#ff9933', icon: <Bot size={20} /> },
         { name: 'Streamlit', percentage: '85%', color: '#0066ff', icon: <Layout size={20} /> },

@@ -4,9 +4,8 @@ import './Tech.css'; // Reusing shared styles for consistency
 import './Songs.css'; // Dedicated styling for songs
 
 
-// Dynamically import images from posters and bookmarks
+// Dynamically import images from posters
 const posterModules = import.meta.glob('../assets/nontech/posters/*.{png,jpg,jpeg,svg}', { eager: true });
-const bookmarkModules = import.meta.glob('../assets/nontech/bookmarks/*.{png,jpg,jpeg,svg}', { eager: true });
 
 const posterImages = Object.values(posterModules).map(img => ({ 
     src: img.default, 
@@ -23,8 +22,6 @@ if (hookIdx !== -1 && bookIdx !== -1) {
     posterImages[hookIdx] = posterImages[bookIdx];
     posterImages[bookIdx] = temp;
 }
-
-const bookmarkImages = Object.values(bookmarkModules).map(img => ({ src: img.default, type: 'bookmarks' }));
 
 
 // Placeholder songs - user will add links later
@@ -74,9 +71,7 @@ const NonTech = () => {
 
     const filteredItems = filter === 'posters'
         ? posterImages
-        : filter === 'bookmarks'
-            ? bookmarkImages
-            : songItems;
+        : songItems;
 
     const openLightbox = (index) => {
         if (filter === 'songs') {
@@ -126,12 +121,7 @@ const NonTech = () => {
                 >
                     Posters
                 </button>
-                <button
-                    className={`filter-btn ${filter === 'bookmarks' ? 'active' : ''}`}
-                    onClick={() => setFilter('bookmarks')}
-                >
-                    Bookmarks
-                </button>
+
                 <button
                     className={`filter-btn ${filter === 'songs' ? 'active' : ''}`}
                     onClick={() => setFilter('songs')}
