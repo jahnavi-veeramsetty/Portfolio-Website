@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, Brain, MessageSquare, BarChart, GitBranch, Database, Bot, Layout } from 'lucide-react';
+import { Terminal, Brain, MessageSquare, BarChart, GitBranch, Database, Bot, Network } from 'lucide-react';
 import './Skills.css';
 import bearImg from '../../assets/bear.png';
 import pyImg from '../../assets/tools/python.png';
@@ -18,9 +18,9 @@ const Skills = () => {
         { name: 'Prompt Engineering', percentage: '90%', color: '#00ccff', icon: <MessageSquare size={20} /> },
         { name: 'LLM Evaluation', percentage: '85%', color: '#66cc33', icon: <BarChart size={20} /> },
         { name: 'Git & GitHub', percentage: '90%', color: '#3366ff', icon: <GitBranch size={20} /> },
-        { name: 'Vector Database', percentage: '80%', color: '#9933ff', icon: <Database size={20} /> },
+        { name: 'ChromaDB & Vector Database', percentage: '80%', color: '#9933ff', icon: <Database size={20} /> },
         { name: 'Hugging Face', percentage: '85%', color: '#ff9933', icon: <Bot size={20} /> },
-        { name: 'Streamlit', percentage: '85%', color: '#0066ff', icon: <Layout size={20} /> },
+        { name: 'LangChain', percentage: '85%', color: '#0066ff', icon: <Network size={20} /> },
     ];
 
 
