@@ -5,7 +5,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    info: ''
+    info: '',
+    botcheck: ''
   });
 
   const [status, setStatus] = useState('');
@@ -34,13 +35,14 @@ const Contact = () => {
           name: formData.name,
           email: formData.email,
           message: formData.info,
+          botcheck: formData.botcheck,
         }),
       });
 
       const result = await response.json();
       if (result.success) {
         setStatus('success');
-        setFormData({ name: '', email: '', info: '' });
+        setFormData({ name: '', email: '', info: '', botcheck: '' });
         setTimeout(() => setStatus(''), 3000);
       } else {
         setStatus('error');
@@ -59,6 +61,17 @@ const Contact = () => {
       
       <div className="contact-card">
         <form className="contact-form" onSubmit={handleSubmit}>
+          {/* Honeypot field — invisible to humans, catches bots */}
+          <input
+            type="checkbox"
+            id="botcheck"
+            name="botcheck"
+            value={formData.botcheck}
+            onChange={handleChange}
+            style={{ display: 'none' }}
+            tabIndex="-1"
+            autoComplete="off"
+          />
           <div className="form-split">
             <div className="form-left">
               <div className="form-group">
