@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.jsx.css';
 import meImage from '../../assets/me.png';
-import resumeFile from "../../assets/Jahnavi's Resume.pdf";
+import resumeFile from "../../assets/Jahnavi Veeramsetty's Resume.pdf";
 
 const Hero = () => {
     return (
@@ -32,7 +32,7 @@ const Hero = () => {
 
             {/* Footer Info */}
             <footer className="hero-footer">
-                <a href={resumeFile} download="Jahnavi_Resume.pdf" className="resume-btn">
+                <a href={resumeFile} download="Jahnavi Veeramsetty's Resume.pdf" className="resume-btn">
                     Download Resume
                 </a>
                 <div className="footer-item">
