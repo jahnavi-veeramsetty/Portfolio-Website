@@ -21,7 +21,7 @@ const Hero = () => {
                         <span className="i-am">I am</span>
                         <span className="morpheus">J a h n a v i</span>
                     </h1>
-                    <p className="hero-subtitle">designer / developer</p>
+                    <p className="hero-subtitle"> Developer / Designer</p>
                 </div>
 
                 {/* Hero Image */}
